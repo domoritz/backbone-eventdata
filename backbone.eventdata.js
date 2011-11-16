@@ -1,9 +1,4 @@
 //= require backbone
-//= require jquery.hotkey
-
-/*
- * reguires the jquery hotkey plugin by jresig
- */
 
 (function(){
 	// Cached regex to split keys for `delegate`.
