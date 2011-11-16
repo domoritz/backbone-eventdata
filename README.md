@@ -1,7 +1,7 @@
 Backbone Eventdata
 ==================
 
-This small backbone plugin allows you to pass eventData to your actions. This is reached while providing a convenience syntax extension to 'Backbone.View.prototype.events'.
+This small backbone plugin allows you to pass eventData to your actions. This is reached while providing a convenience syntax extension to _Backbone.View.prototype.events_.
 
 ```javascript
 events: {
