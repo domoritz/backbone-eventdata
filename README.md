@@ -5,16 +5,48 @@ This small backbone plugin allows you to pass eventData to your actions. This is
 
 ```javascript
 events: {
-  "namespace:eventName[eventData] sizzleSelector": "anAction", //in general
-  "menu:doubleclick[newWindow] a.menu": "navigateTo", //eg. for menues
-  "keydown[ctrl+a]": "selectAll", //eg. for jquery.hotkeys by jeresig
+  
+  //in general
+  "namespace:eventName[eventData] sizzleSelector": "anAction",
+  
+  //e.g. for menues
+  "doubleclick[newWindow] a.menu": "navigateTo",
+  
+  //e.g. for jquery.hotkeys by jeresig
+  "keydown[ctrl+a]": "selectAll",
   }
 ```
 
 how do I use it?
 ----------------
-
-Include backbone.eventdata.js into your project *after* Backbone.
+1. Include backbone.eventdata.js into your project __after__ Backbone.
+1. evaluate event.data in your callback
+1. add eventdata in brackets to your eventbindings (directly after the events name)
 
 how does it work?
 -----------------
+This script overloads _Backbone.View.prototype.delegateEvents_ and adds basically just a few statements to it.
+
+example
+-------
+```javascript
+view = new Backbone.View({
+  
+  events: {
+    //on doubleclick call something like navigateTo({data:"newWindow", ...})
+    "doubleclick[newWindow] a.menu": "navigateTo",
+  },
+  
+  navigateTo: function(event, ui){
+    if(event && event.data == "newWindow")
+      //the magic happens!
+      this.openWindow();
+    else
+      this.doOtherMagic();
+  }
+    
+  openWindow: function(){
+    //...
+    }
+  }
+});
