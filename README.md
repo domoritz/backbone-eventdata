@@ -9,8 +9,9 @@ events: {
   //in general
   "namespace:eventName[eventData] sizzleSelector": "anAction",
   
+  //blanks are all right!
   //e.g. for menues
-  "doubleclick[newWindow] a.menu": "navigateTo",
+  "doubleclick[new Window] a.menu": "navigateTo",
   
   //e.g. for jquery.hotkeys by jeresig
   "keydown[ctrl+a]": "selectAll",
@@ -34,11 +35,11 @@ view = new Backbone.View({
   
   events: {
     //on doubleclick call something like navigateTo({data:"newWindow", ...})
-    "doubleclick[newWindow] a.menu": "navigateTo",
+    "doubleclick[new Window] a.menu": "navigateTo",
   },
   
   navigateTo: function(event, ui){
-    if(event && event.data == "newWindow")
+    if(event && event.data == "new Window")
       //the magic happens!
       this.openWindow();
     else
