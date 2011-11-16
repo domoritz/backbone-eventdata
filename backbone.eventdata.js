@@ -2,7 +2,7 @@
 
 (function(){
 	// Cached regex to split keys for `delegate`.
-	var eventSplitter = /^([^\s\[\]]+)(\[(\S+)\])?\s*(.*)$/;
+	var eventSplitter = /^([^\s\[\]]+)(\[([^\[\]]+)\])?\s*(.*)$/;
 
 	// Set up all inheritable **Backbone.View** properties and methods.
 	_.extend(Backbone.View.prototype, {
