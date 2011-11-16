@@ -10,3 +10,11 @@ events: {
   "keydown[ctrl+a]": "selectAll", //eg. for jquery.hotkeys by jeresig
   }
 ```
+
+how do I use it?
+----------------
+
+Include backbone.eventdata.js into your project *after* Backbone.
+
+how does it work?
+-----------------
