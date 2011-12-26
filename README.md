@@ -15,6 +15,15 @@ events: {
   
   //e.g. for jquery.hotkeys by jeresig
   "keydown[ctrl+a]": "selectAll",
+  
+  //just one action for that much links
+	"click[1]   .turn_1_page_right":    "turnPage",
+	"click[5]   .turn_5_pages_right":   "turnPage",
+	"click[20]  .turn_20_pages_right":  "turnPage",
+	"click[-1]  .turn_1_page_left":     "turnPage",
+	"click[-5]  .turn_5_pages_left":    "turnPage",
+	"click[-20] .turn_20_pages_left":   "turnPage",
+
   }
 ```
 
