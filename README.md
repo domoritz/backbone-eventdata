@@ -60,3 +60,7 @@ view = new Backbone.View({
     }
   }
 });
+
+what backbone version do I need?
+--------------------------------
+The latest patch will work with backbone 0.9.1. If you are still using backbone 0.5.3, take the patch from 4dfc1c88f1d.
