@@ -60,6 +60,7 @@ view = new Backbone.View({
     }
   }
 });
+```
 
 what backbone version do I need?
 --------------------------------
