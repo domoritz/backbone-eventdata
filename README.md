@@ -11,7 +11,7 @@ events: {
   
   //blanks are all right!
   //e.g. for menues
-  "doubleclick[new Window] a.menu": "navigateTo",
+  "dblclick[new Window] a.menu": "navigateTo",
   
   //e.g. for jquery.hotkeys by jeresig
   "keydown[ctrl+a]": "selectAll",
@@ -44,7 +44,7 @@ view = new Backbone.View({
   
   events: {
     //on doubleclick call something like navigateTo({data:"newWindow", ...})
-    "doubleclick[new Window] a.menu": "navigateTo",
+    "dblclick[new Window] a.menu": "navigateTo",
   },
   
   navigateTo: function(event, ui){
